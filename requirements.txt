@@ -1,0 +1,8 @@
+# rover-monitor/requirements.txt
+Flask==3.0.3
+eventlet==0.36.1
+python-socketio[client]==5.11.3
+python-engineio==4.9.1
+psutil==6.0.0
+transforms3d==0.4.0
+rclpy>=2.0.0  # ROS2 Humble/Iron/Jazzy
