@@ -170,49 +170,53 @@
                         </div>
                     </div>
                 </div>
+<!-- Cameras Tab -->
+<div id="cameras-tab" class="tab-content hidden">
+    <h3 class="text-lg font-bold mb-4">Camera Feeds</h3>
 
-                <!-- Cameras Tab -->
-                <div id="cameras-tab" class="tab-content hidden">
-                    <h3 class="text-lg font-bold mb-4">Camera Feeds</h3>
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                        <div class="card">
-                            <div class="text-sm font-semibold mb-2">Front Camera</div>
-                            <div class="camera-feed" id="cam-front">
-                                <span>Camera 1 Stream</span>
-                            </div>
-                            <div class="text-xs text-gray-400 mt-2">
-                                <span class="inline-block px-2 py-1 bg-gray-700 rounded mt-2">FPS: <span id="cam1-fps">0</span></span>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="text-sm font-semibold mb-2">Rear Camera</div>
-                            <div class="camera-feed" id="cam-rear">
-                                <span>Camera 2 Stream</span>
-                            </div>
-                            <div class="text-xs text-gray-400 mt-2">
-                                <span class="inline-block px-2 py-1 bg-gray-700 rounded mt-2">FPS: <span id="cam2-fps">0</span></span>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="text-sm font-semibold mb-2">Left Camera</div>
-                            <div class="camera-feed" id="cam-left">
-                                <span>Camera 3 Stream</span>
-                            </div>
-                            <div class="text-xs text-gray-400 mt-2">
-                                <span class="inline-block px-2 py-1 bg-gray-700 rounded mt-2">FPS: <span id="cam3-fps">0</span></span>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="text-sm font-semibold mb-2">Right Camera</div>
-                            <div class="camera-feed" id="cam-right">
-                                <span>Camera 4 Stream</span>
-                            </div>
-                            <div class="text-xs text-gray-400 mt-2">
-                                <span class="inline-block px-2 py-1 bg-gray-700 rounded mt-2">FPS: <span id="cam4-fps">0</span></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="card">
+            <div class="text-sm font-semibold mb-2">Front Camera</div>
+            <div class="camera-feed">
+                <img src="/video/cam1" class="w-full h-full object-cover rounded-lg">
+            </div>
+            <div class="text-xs text-gray-400 mt-2">
+                FPS: <span id="cam1-fps">0</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="text-sm font-semibold mb-2">Rear Camera</div>
+            <div class="camera-feed">
+                <img src="/video/cam2" class="w-full h-full object-cover rounded-lg">
+            </div>
+            <div class="text-xs text-gray-400 mt-2">
+                FPS: <span id="cam2-fps">0</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="text-sm font-semibold mb-2">Left Camera</div>
+            <div class="camera-feed">
+                <img src="/video/cam3" class="w-full h-full object-cover rounded-lg">
+            </div>
+            <div class="text-xs text-gray-400 mt-2">
+                FPS: <span id="cam3-fps">0</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="text-sm font-semibold mb-2">Right Camera</div>
+            <div class="camera-feed">
+                <img src="/video/cam4" class="w-full h-full object-cover rounded-lg">
+            </div>
+            <div class="text-xs text-gray-400 mt-2">
+                FPS: <span id="cam4-fps">0</span>
+            </div>
+        </div>
+    </div>
+</div>
+
 
                 <!-- Sensors Tab -->
                 <div id="sensors-tab" class="tab-content hidden">
@@ -274,8 +278,7 @@
         </div>
     </div>
 
-    <!-- Socket.IO for real-time communication -->
-    <script src="https://cdn.socket.io/4.7.0/socket.io.min.js"></script>
+
 
     <!-- Custom JS -->
     <script src="{{ url_for('static', filename='app.js') }}"></script>
